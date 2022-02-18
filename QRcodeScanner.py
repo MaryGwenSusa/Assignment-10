@@ -14,3 +14,8 @@ def scannerSetUp(frame):
         # Shows decoded data
         scannerFont = cv2.FONT_HERSHEY_COMPLEX_SMALL # Change font type
         cv2.putText(frame, infoQRCode, (r + 6, e - 6), scannerFont, 1.0, (0, 0, 255), 3) # Layout and text color
+
+         # Date and Time configuration
+        currentTime = datetime.datetime.now()
+        date = "%s/%s/%s" % (currentTime.month, currentTime.day, currentTime.year)
+        time = "%s:%s" % (currentTime.hour, currentTime.minute)
