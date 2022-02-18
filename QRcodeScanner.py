@@ -24,3 +24,23 @@ def scannerSetUp(frame):
         with open("QRinfo.txt",'w') as checkIn:
             checkIn.write("Scanned QR Code:" + infoQRCode + (f"\n\n\nDate: {date}\nTime: {time}"))
     return frame
+
+def access():
+
+    # Set-ups camera
+    defaultCam = cv2.VideoCapture(0) # Middle of OS and Python
+    display = cv2.QRCodeDetector() # Reads the data pattern with pixels
+    
+    # Loop so webcam won't close while detecting/decoding
+    while True:
+        __, frame = defaultCam.read() #To refresh command system
+        info, dqrcam, _ = display.detectAndDecode(frame)
+        frame = scannerSetUp(frame)
+        cv2.imshow('QR Code Scanner', frame)
+        if cv2.waitKey(1) & 0xFF == 27:
+            break
+    
+    defaultCam.release() # Lets off allocated memory
+    cv2.destroyAllWindows() # To shut down the program
+
+access()
