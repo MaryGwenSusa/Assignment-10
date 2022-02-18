@@ -17,3 +17,8 @@ with open('personDetails.txt') as txt:
 codeLayout.add_data(pDtxt)
 codeLayout.make(fit=True)
 codeGenerated = codeLayout.make_image(fill_color = 'black', back_color = 'white') # More design
+logo = Image.open('virus.png') # Image is imported through PIL module
+logo.thumbnail((180, 180)) # Aspect ratio
+logoPosition = ((codeGenerated.size[0] - logo.size[0]) // 2, (codeGenerated.size[1] - logo.size[1]) // 2) # Image size is fit
+codeGenerated.paste(logo, logoPosition)
+codeGenerated.save('QRcode1.png')
