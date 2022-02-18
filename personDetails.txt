@@ -1,0 +1,23 @@
+Scanned QR Code: CONTACT TRACING INFORMATION
+
+Personal Information:
+    Full Name     : Mary Gwen G. Susa
+    Address       : Block 7 Lot 34 Kensington Village 12, Lancaster New City, Gen. Trias City, Cavite
+    Age           : 21
+    Sex           : Female
+    Birthday      : January 28, 2001
+    Contact Number: 0934-123-1234
+    Email         : streammunimuni@gmail.com
+
+
+Vaccination Information
+    (/) Fully Vaccinated  ( ) First dose only ( ) Not Vaccinated
+    Vaccine : Sinovac-CoronaVac (Infanta, Quezon Vaccination Center)
+    Date of first dose: 02-23-2021
+    Date of second dose: 11-06-21
+
+    Booster: N/A
+    Date of Booster shot: N/A
+
+Date: 2/16/2022
+Time: 18:54
