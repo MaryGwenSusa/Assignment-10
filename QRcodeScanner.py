@@ -19,3 +19,8 @@ def scannerSetUp(frame):
         currentTime = datetime.datetime.now()
         date = "%s/%s/%s" % (currentTime.month, currentTime.day, currentTime.year)
         time = "%s:%s" % (currentTime.hour, currentTime.minute)
+
+         # Re-writing file
+        with open("QRinfo.txt",'w') as checkIn:
+            checkIn.write("Scanned QR Code:" + infoQRCode + (f"\n\n\nDate: {date}\nTime: {time}"))
+    return frame
